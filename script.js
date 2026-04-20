@@ -1,15 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
-
 const frameCount = 240;
 // Format frame index as 3 digits. e.g. 001, 002
 const currentFrame = index => `./frames/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`;
-
 const canvas = document.getElementById("hero-canvas");
 const ctx = canvas.getContext("2d");
 const images = [];
 const imageSeq = { frame: 0 };
 let loadedImages = 0;
-
 // Handle canvas resizing to fill screen without blur
 function resizeCanvas() {
     const dpr = window.devicePixelRatio || 1;
